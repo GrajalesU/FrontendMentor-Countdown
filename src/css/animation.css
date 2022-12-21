@@ -1,0 +1,25 @@
+.addZ {
+  animation: addIdxZ 0.2s linear forwards;
+}
+
+@keyframes addIdxZ {
+  0% {
+    z-index: 1;
+  }
+  100% {
+    z-index: 100;
+  }
+}
+
+.reduceZ {
+  animation: reduceIdxZ 0.2s linear forwards;
+}
+
+@keyframes reduceIdxZ {
+  0% {
+    z-index: 100;
+  }
+  100% {
+    z-index: -1;
+  }
+}

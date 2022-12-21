@@ -5,16 +5,15 @@ const NumberDate = ({ number = 10 }) => {
   return (
     <div className="w-14 md:w-24 h-14 md:h-24 relative">
       <motion.div
-        id="lastNumberZDeMayorAMenor"
-        key={number}
+        key={number+1}
         initial={{
           zIndex: 100,
         }}
         animate={{
           rotateX: ["0deg", "180deg"],
           skew: ["0deg", "-20deg", "0deg"],
-          zIndex: [100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 1],
-          background: ["#0c4a6e", "#0c4a6e", "#0c4a6e", "#075985"],
+          background: ["#0c4a6e", "#075985"],
+          zIndex: 1,
         }}
         transition={{ ease: "easeInOut", duration: 0.8 }}
         className="reduceZ origin-bottom absolute bg-sky-900 w-full h-1/2 rounded-md overflow-hidden"

@@ -2,10 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../css/animation.css";
 const NumberDate = ({ number = 10 }) => {
+  const twoDigitNumber = number.toString().padStart(2, "0");
+  const twoDigitNextNumber = (number+1).toString().padStart(2, "0");
+
   return (
     <div className="w-14 md:w-24 h-14 md:h-24 relative">
       <motion.div
-        key={number+1}
+        key={twoDigitNextNumber}
         initial={{
           zIndex: 100,
         }}
@@ -19,22 +22,22 @@ const NumberDate = ({ number = 10 }) => {
         className="reduceZ origin-bottom absolute bg-sky-900 w-full h-1/2 rounded-md overflow-hidden"
       >
         <div className="absolute font-bold text-stone-100 text-2xl  md:text-3xl top-[calc(50%-0.2rem)] left-[calc(50%-0.9rem)] md:top-[calc(50%+0.3rem)]">
-          {number + 1}
+          {twoDigitNextNumber}
         </div>
       </motion.div>
       <div className="origin-bottom absolute bg-sky-800 w-full h-1/2 rounded-md bottom-0 overflow-hidden">
         <div className="absolute font-bold text-stone-100 text-2xl  md:text-3xl top-[calc(-50%-0.2rem)] left-[calc(50%-0.9rem)] md:top-[calc(-50%+0.3rem)]">
-          {number + 1}
+          {twoDigitNextNumber}
         </div>
       </div>
 
       <div className="origin-bottom absolute bg-sky-900 w-full h-1/2 rounded-md overflow-hidden">
         <div className="absolute font-bold text-stone-100 text-2xl  md:text-3xl top-[calc(50%-0.2rem)] left-[calc(50%-0.9rem)] md:top-[calc(50%+0.3rem)]">
-          {number}
+          {twoDigitNumber}
         </div>
       </div>
       <motion.div
-        key={number}
+        key={twoDigitNumber}
         initial={{
           zIndex: 1,
         }}
@@ -47,7 +50,7 @@ const NumberDate = ({ number = 10 }) => {
         className="addZ origin-top absolute bg-sky-800 w-full h-1/2 rounded-md bottom-0 overflow-hidden"
       >
         <div className="absolute font-bold text-stone-100 text-2xl  md:text-3xl top-[calc(-50%-0.2rem)] left-[calc(50%-0.9rem)] md:top-[calc(-50%+0.3rem)]">
-          {number}
+          {twoDigitNumber}
         </div>
       </motion.div>
     </div>

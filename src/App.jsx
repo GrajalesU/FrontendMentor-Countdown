@@ -1,6 +1,5 @@
 import { useState } from "react";
 import DateElement from "./components/DateElement";
-import NumberDate from "./components/NumberDate";
 import { timeUntilEndOfYear } from "./utils/date";
 
 function App() {

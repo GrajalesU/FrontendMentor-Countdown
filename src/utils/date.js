@@ -3,7 +3,7 @@ export const timeUntilEndOfYear = () => {
   const currentDate = new Date();
 
   // Get end of year date and time
-  const endOfYearDate = new Date('12/31/2022 23:59:59');
+  const endOfYearDate = new Date('12/31/2023 23:59:59');
 
   // Calculate time difference in milliseconds
   const timeDifference = endOfYearDate.getTime() - currentDate.getTime();
